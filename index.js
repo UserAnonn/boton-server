@@ -22,6 +22,12 @@ wss.on("connection", ws => {
 });
 
 const PORT = process.env.PORT || 10000;
+
+app.get("/", (req, res) => {
+  res.send("Servidor WebSocket activo 🚀");
+});
+
+
 server.listen(PORT, () => {
   console.log(`Servidor WebSocket ejecutándose en el puerto ${PORT}`);
 });
